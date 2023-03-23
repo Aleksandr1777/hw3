@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bank_with_gold_coins.iml" filepath="$PROJECT_DIR$/bank_with_gold_coins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sort_algoritm.iml" filepath="$PROJECT_DIR$/sort_algoritm.iml" />
     </modules>
   </component>
 </project>

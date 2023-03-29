@@ -1,7 +1,11 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Bank {
     private static Map<Account, Client> clientMap = createClientMap();
@@ -21,10 +25,7 @@ public class Bank {
 
     public static List<Account> getAccounts(Client client) {
         List<Account> result = new ArrayList<>();
-        for (Map.Entry<Account, Client> pair : clientMap.entrySet()) {
-            if (pair.getValue().equals(client))
-                result.add(pair.getKey());
-        }
+        clientMap.entrySet().stream().filter(a->a.getValue().equals(client)).forEach(entry->result.add(entry.getKey()));
         return result;
     }
 
